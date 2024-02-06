@@ -2,6 +2,42 @@
 #include <string.h>
 using namespace std;
 
+int getInt();
+string getString();
+double getDouble();
+bool checkEmail();
+string selectCity();
+bool checkPSW();
+
+class Profile
+{
+private:
+    int id;
+    string psw;
+    char name[20];
+
+public:
+    Profile()
+    {
+        cout << "\t--- Enter Your Profile Data ---" << endl;
+        this->setProfile();
+    }
+
+    void setProfile()
+    {
+        cout << " Your Id\t: " << this->id << endl
+             << " Your Name\t: " << this->name << endl
+             << " Your Password : " << this->psw << endl;
+    }
+
+    void getProfile()
+    {
+        cout << " Your Id \t: " << this->id << endl
+             << " Your Name \t: " << this->name << endl
+             << " Your Password : " << this->psw << endl;
+    }
+};
+
 int getInt()
 {
     int num;
@@ -267,4 +303,27 @@ rev:
              << "Sorry, We Can't find your state Please Re-Enter !!" << endl;
         goto rev;
     }
+}
+
+bool checkPSW(string psw)
+{
+    int lwr = 0, dig = 0, space = 0, sym = 0, len = 0;
+
+    for (int i = 0; psw[i] != '\0'; i++)
+    {
+        len++;
+
+        ((psw[i] >= 65 && psw[i] <= 90) || (psw[i] >= 97 && psw[i] <= 122))
+            ? lwr++
+        : (psw[i] >= 48 && psw[i] <= 57)
+            ? dig++
+        : (psw[i] == 32)
+            ? space++
+            : sym++;
+    }
+
+    if (lwr > 0 && sym > 0 && dig > 0 && space == 0 && len > 5)
+        return true;
+    else
+        return false;
 }
