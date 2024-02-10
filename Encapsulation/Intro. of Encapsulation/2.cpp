@@ -1,5 +1,5 @@
 #include <iostream>
-#include "G:\.Param\C++ (6 PM)\Functions.cpp"
+#include "../Functions-2.cpp"
 using namespace std;
 
 void user();
@@ -56,7 +56,7 @@ private:
             return true;
         else
         {
-            cout << "Your Number is Not Valid for our System Please Re-Enter Numebr" << endl;
+            cout << " Your Number is Not Valid for our System Please Re-Enter Numebr" << endl;
             return false;
         }
     }
@@ -112,7 +112,7 @@ public:
     void getData()
     {
         cout << "\t" << this->id << "\t" << this->name << "\t" << this->age << "\t" << this->mobileNu << "\t" << this->city
-             << "\t\t" << this->simBrand_Name << "\t" << this->simValidity << endl;
+             << "\t\t" << this->simBrand_Name << "\t\t" << this->simValidity << endl;
     }
 };
 
@@ -124,7 +124,7 @@ int main()
 
 void user()
 {
-    cout << "Enter Total Number Customer : ";
+    cout << " Enter Total Number Customer : ";
     int n = getInt();
 
     Customer s[n];

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
-#include "G:\.Param\C++ (6 PM)\Functions.cpp"
+#include "../Functions-2.cpp"
 using namespace std;
 
 void user();
@@ -56,10 +56,9 @@ private:
           << this->college
           << endl;
 
-        if (!s.is_open())
-            cout << "Sorry, We Can't find your file Please Check your file name !!" << endl;
-        else
-            cout << "Your Data is Successfully stored !! " << endl;
+        (!s.is_open())
+            ? cout << "Sorry, We Can't find your file Please Check your file name !!" << endl
+            : cout << "Your Data is Successfully stored !! " << endl;
 
         s.close();
     }
@@ -127,10 +126,10 @@ public:
         cout << "  Id\t"
              << "  Name\t\t"
              << "  Age\t\t"
-             << "Email\t\t\t"
-             << "Degree\t\t"
-             << "City\t\t"
-             << "College" << endl
+             << "  Email\t\t\t"
+             << "  Degree\t\t"
+             << "  City\t\t"
+             << "  College" << endl
              << "-------\t-------\t\t-------\t\t-------\t\t\t-------\t\t-------\t\t-------" << endl
              << endl
              << endl;
