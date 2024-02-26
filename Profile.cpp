@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string.h>
 #include "Functions.cpp"
 using namespace std;
 
@@ -36,15 +34,15 @@ public:
 
     void setProfile()
     {
-        cout << " Id\t: ";
+        C << " Id\t: ";
         this->id = getInt();
 
         fflush(stdin);
-        cout << " Name\t: ";
+        C << " Name\t: ";
         gets(this->name);
 
     rev:
-        cout << "Password : ";
+        C << "Password : ";
         this->psw = getString();
 
         if (checkPSW(this->psw))
@@ -86,7 +84,7 @@ bool checkPSW(string psw)
         return true;
     else
     {
-        cout << " Your Password Is wrong! Please Re-Enter YOur Password !" << endl;
+        C << " Your Password Is wrong! Please Re-Enter YOur Password !" << endl;
         return false;
     }
 }
@@ -97,8 +95,8 @@ bool checkAge(int age)
         return true;
     else
     {
-        cout << endl
-             << "Sorry, Age must be between 18 and 30" << endl;
+        C << endl
+          << "Sorry, Age must be between 18 and 30" << endl;
         return false;
     }
 }
