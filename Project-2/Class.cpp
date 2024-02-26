@@ -1,6 +1,4 @@
-#include <iostream>
 #include "../Profile.cpp"
-using namespace std;
 
 typedef class SuperMarketSystem
 {
@@ -13,19 +11,19 @@ private:
 
     void setData()
     {
-        cout << endl
+        C << endl
              << " Your Id\t: " << this->id
              << endl
              << " Name \t: ";
         this->name = getString();
 
-        cout << " Quantity : ";
+    C << " Quantity : ";
         this->qty = getInt();
 
-        cout << " Price \t: ";
+        C << " Price \t: ";
         this->price = getInt();
 
-        cout << " Discount : ";
+        C << " Discount : ";
         this->discount = getDouble();
 
         this->getBill();
@@ -43,13 +41,13 @@ private:
 public:
     static void intializeData()
     {
-        cout << " Enter Intialize ID : ";
+        C << " Enter Intialize ID : ";
         SuperMarketSystem::idCounter = getInt();
     }
 
     SuperMarketSystem()
     {
-        cout << endl
+        C << endl
              << "\t--- Enter Data ---" << endl;
         this->id = idCounter++;
         this->setData();
@@ -58,7 +56,7 @@ public:
 
     void getHeading()
     {
-        cout << "==============================================================================" << endl
+        C << "==============================================================================" << endl
              << " Id\tName\t\tQuantiy\tPrice\tDiscount\tTotalAmount" << endl
              << "-------\t-------\t\t-------\t-------\t-------\t\t-----------" << endl
              << "==============================================================================" << endl;
@@ -66,17 +64,17 @@ public:
 
     void getEndHeading()
     {
-        cout << "=================================================================================" << endl;
+        C << "=================================================================================" << endl;
     }
 
     void getData()
     {
-        cout << endl
+        C << endl
              << this->id << "\t"
              << this->name << "\t\t"
              << this->price << "\t"
              << this->qty << "\t"
-             << this->discount << "%"
+             << this->discount * 100 << "%"
              << "\t\t"
              << this->tPrice << endl
              << endl;
@@ -92,7 +90,7 @@ public:
 
     static void generateBill()
     {
-        cout << "Bill \t\t\t\t\t\t\t:" << SuperMarketSystem::bill
+        C << "Bill \t\t\t\t\t\t\t:" << SuperMarketSystem::bill
              << endl;
     }
 

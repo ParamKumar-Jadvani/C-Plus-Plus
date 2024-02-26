@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Class.cpp"
-using namespace std;
 
 void user();
 
@@ -15,7 +13,7 @@ void user()
 
     SMS::intializeData();
 
-    cout << "Enter Your Total Number of Products : ";
+    C << "Enter Your Total Number of Products : ";
     int n = getInt();
 
     SMS c[n];
@@ -36,16 +34,16 @@ void user()
     }
     else
     {
-        cout << "Your Login Is Failed Sorry!" << endl;
+        C << "Your Login Is Failed Sorry!" << endl;
         goto back;
     }
 
     int id;
 
 next:
-    cout << endl
-         << endl
-         << "Enter Your Product Id : ";
+    C << endl
+      << endl
+      << "Enter Your Product Id : ";
     id = getInt();
 
     c[0].getHeading();
@@ -56,5 +54,5 @@ next:
     }
 
 back:
-    cout << endl;
+    C << endl;
 }
