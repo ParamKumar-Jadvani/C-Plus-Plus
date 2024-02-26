@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string.h>
+#define C cout
+#define c cin
 using namespace std;
 
 int getInt();
@@ -8,24 +10,25 @@ double getDouble();
 bool checkEmail(string email);
 string selectCity();
 bool checkPSW(string psw);
+void user();
 
 int getInt()
 {
     int num;
-    cin >> num;
+    c >> num;
     return num;
 }
 
 string getString()
 {
     string str;
-    cin >> str;
+    c >> str;
     return str;
 }
 
 double getDouble()
 {
     double num;
-    cin >> num;
+    c >> num;
     return num;
 }
