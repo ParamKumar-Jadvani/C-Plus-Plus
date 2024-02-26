@@ -70,12 +70,21 @@ public:
 
     void getData()
     {
-        C << this->id << "\t" << this->rating << "\t" << this->type << "\t" << this->staff
+        C << this->id << "\t"
+          << this->rating << "\t"
+          << this->type << "\t"
+          << this->roomQTY << "\t\t"
+          << this->staffQTY << "\t\t"
+          << this->location << "\t\t"
+          << this->estYear << endl
+          << endl;
     }
 
     void getHeading()
     {
-        C << "Id\tRating\tType\tRoom Quantity\tStaff Quantity\tLocation\tEstablished Year" << endl
+        C << "\t\t\t\t" << name << endl
+          << endl
+          << "Id\tRating\tType\tRoom Quantity\tStaff Quantity\tLocation\tEstablished Year" << endl
           << endl
           << "=======\t=======\t=======\t=============\t===============\t=========\t================" << endl;
     }
@@ -99,4 +108,9 @@ void user()
     H::setStaticData();
 
     H h[size];
+
+    h[0].getHeading();
+
+    for (int i = 0; i < size; i++)
+        h[0].getData();
 }
