@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Functions.cpp"
-using namespace std;
 
 bool checkEmail(string email)
 {
@@ -30,7 +28,7 @@ bool checkEmail(string email)
     }
     else
     {
-        cout << "Your Email has not a @ or . symbol" << endl;
+        C << "Your Email has not a @ or . symbol" << endl;
         goto rev;
     }
 
@@ -38,7 +36,7 @@ bool checkEmail(string email)
         ;
     else
     {
-        cout << "Your Email has not a m character" << endl;
+        C << "Your Email has not a m character" << endl;
         goto rev;
     }
 
@@ -46,7 +44,7 @@ bool checkEmail(string email)
         ;
     else
     {
-        cout << "Your Email has not  a character" << endl;
+        C << "Your Email has not  a character" << endl;
         goto rev;
     }
 
@@ -54,7 +52,7 @@ bool checkEmail(string email)
         ;
     else
     {
-        cout << "Your Email has not  i character" << endl;
+        C << "Your Email has not  i character" << endl;
         goto rev;
     }
 
@@ -62,7 +60,7 @@ bool checkEmail(string email)
         ;
     else
     {
-        cout << "Your Email has not  l character" << endl;
+        C << "Your Email has not  l character" << endl;
         goto rev;
     }
 
@@ -70,7 +68,7 @@ bool checkEmail(string email)
         ;
     else
     {
-        cout << "Your Email has so much length" << endl;
+        C << "Your Email has so much length" << endl;
         goto rev;
     }
 
@@ -85,8 +83,8 @@ bool checkAge(int age)
         return true;
     else
     {
-        cout << endl
-             << "Sorry, Age must be between 18 and 30" << endl;
+        C << endl
+          << "Sorry, Age must be between 18 and 30" << endl;
         return false;
     }
 }
@@ -96,28 +94,28 @@ string selectCity()
 rev:
     int city;
 
-    cout << endl
-         << "\t--- Select your State ---" << endl
-         << "\t\t1) Rajasthan" << endl
-         << "\t\t2) Gujarat" << endl
-         << "\t\t3) Maharastra" << endl
-         << endl;
+    C << endl
+      << "\t--- Select your State ---" << endl
+      << "\t\t1) Rajasthan" << endl
+      << "\t\t2) Gujarat" << endl
+      << "\t\t3) Maharastra" << endl
+      << endl;
     int state = getInt();
 
     switch (state)
     {
     case 1:
     back1:
-        cout << endl
-             << "\t\t\t--- Select your City ---" << endl
-             << "\t\t\t\t1) Jaipur" << endl
-             << "\t\t\t\t2) Jhodhpur" << endl
-             << "\t\t\t\t3) Kota" << endl
-             << "\t\t\t\t4) Udaipur" << endl
-             << "\t\t\t\t5) Ajmer" << endl
-             << "\t\t\t\t6) Jaisalmer" << endl
-             << "\t\t\t\t7) Sri Nagar" << endl
-             << endl;
+        C << endl
+          << "\t\t\t--- Select your City ---" << endl
+          << "\t\t\t\t1) Jaipur" << endl
+          << "\t\t\t\t2) Jhodhpur" << endl
+          << "\t\t\t\t3) Kota" << endl
+          << "\t\t\t\t4) Udaipur" << endl
+          << "\t\t\t\t5) Ajmer" << endl
+          << "\t\t\t\t6) Jaisalmer" << endl
+          << "\t\t\t\t7) Sri Nagar" << endl
+          << endl;
         city = getInt();
 
         switch (city)
@@ -144,23 +142,23 @@ rev:
             return "Sri Nagar";
 
         default:
-            cout << endl
-                 << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
+            C << endl
+              << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
             goto back1;
         }
 
     case 2:
     back2:
-        cout << endl
-             << "\t\t\t--- Select your City ---" << endl
-             << "\t\t\t\t1) Ahmedabad" << endl
-             << "\t\t\t\t2) Gandhinagar" << endl
-             << "\t\t\t\t3) Surat" << endl
-             << "\t\t\t\t4) Rajkot" << endl
-             << "\t\t\t\t5) Bhavnagar" << endl
-             << "\t\t\t\t6) Vadodara" << endl
-             << "\t\t\t\t7) Dwarka" << endl
-             << endl;
+        C << endl
+          << "\t\t\t--- Select your City ---" << endl
+          << "\t\t\t\t1) Ahmedabad" << endl
+          << "\t\t\t\t2) Gandhinagar" << endl
+          << "\t\t\t\t3) Surat" << endl
+          << "\t\t\t\t4) Rajkot" << endl
+          << "\t\t\t\t5) Bhavnagar" << endl
+          << "\t\t\t\t6) Vadodara" << endl
+          << "\t\t\t\t7) Dwarka" << endl
+          << endl;
         city = getInt();
 
         switch (city)
@@ -187,23 +185,23 @@ rev:
             return "Dwarka";
 
         default:
-            cout << endl
-                 << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
+            C << endl
+              << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
             goto back2;
         }
 
     case 3:
     back3:
-        cout << endl
-             << "\t\t\t--- Select your City ---" << endl
-             << "\t\t\t\t1) Mumbai" << endl
-             << "\t\t\t\t2) Pune" << endl
-             << "\t\t\t\t3) Nashik" << endl
-             << "\t\t\t\t4) Nagpur" << endl
-             << "\t\t\t\t5) Navi Mumbai" << endl
-             << "\t\t\t\t6) Panvel" << endl
-             << "\t\t\t\t7) Ratnagiri" << endl
-             << endl;
+        C << endl
+          << "\t\t\t--- Select your City ---" << endl
+          << "\t\t\t\t1) Mumbai" << endl
+          << "\t\t\t\t2) Pune" << endl
+          << "\t\t\t\t3) Nashik" << endl
+          << "\t\t\t\t4) Nagpur" << endl
+          << "\t\t\t\t5) Navi Mumbai" << endl
+          << "\t\t\t\t6) Panvel" << endl
+          << "\t\t\t\t7) Ratnagiri" << endl
+          << endl;
         city = getInt();
 
         switch (city)
@@ -230,14 +228,14 @@ rev:
             return "Ratnagiri";
 
         default:
-            cout << endl
-                 << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
+            C << endl
+              << "Sorry, We Can't find your city Please Re-Enter !!" << endl;
             goto back3;
         }
 
     default:
-        cout << endl
-             << "Sorry, We Can't find your state Please Re-Enter !!" << endl;
+        C << endl
+          << "Sorry, We Can't find your state Please Re-Enter !!" << endl;
         goto rev;
     }
 }
