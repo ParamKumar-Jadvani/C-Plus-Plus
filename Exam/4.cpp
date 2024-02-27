@@ -51,7 +51,7 @@ public:
     {
         CO << endl
            << " Color is : " << color << endl
-           << " Area of Circle is : " << 2 * 3.14 * w << endl << endl;
+           << " Area of Circle is : " << w * 3.14 * w << endl << endl;
     }
     void display()
     {
