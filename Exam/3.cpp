@@ -38,7 +38,7 @@ public:
     void calcArea()
     {
         setData();
-        CO << "Area of Circle is : " << 2 * 3.14 * w << endl;
+        CO << "Area of Circle is : " << w * 3.14 * w << endl;
     }
 };
 
